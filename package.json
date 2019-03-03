@@ -1,0 +1,41 @@
+{
+  "name": "my-personal-website",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -Rf ./dist",
+    "start": "yarn clean && gulp --colors && gulp watch --colors",
+    "build": "yarn clean && gulp --colors --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RNunes13/MyPersonalWebsite"
+  },
+  "author": {
+    "name": "Rodrigo Nunes",
+    "email": "nunesrodrigo13@outlook.com"
+  },
+  "dependencies": {
+    "browser-resolve": "^1.11.3",
+    "initialize-css": "^1.4.0",
+    "lodash": "4.17.11",
+    "minimatch": "3.0.2",
+    "node-sass": "^4.9.4",
+    "sass-rem": "^2.0.1",
+    "scss-form-reset": "0.0.3",
+    "static-eval": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^5.6.1",
+    "eslint-config-google": "^0.11.0",
+    "gulp": "^3.9.1",
+    "taskerify": "^1.5.5"
+  },
+  "engines": {
+    "node": ">= 10.5.1"
+  }
+}

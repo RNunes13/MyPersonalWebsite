@@ -1,0 +1,19 @@
+extends ./_layouts/_base.pug
+
+//- Template variables
+block vars
+  - var $templateName = 'home'
+  - var $templateClass = 'home'
+
+//- Page styles
+block append styles
+  link(href=`assets/css/personal-${$templateName}.css`, media='all', rel='stylesheet')/
+
+//- Main Content
+block content
+  div(class="rn-home__container")
+    h1 Home page
+
+//- Page scripts
+block append scripts
+  script(src=`assets/js/personal-${$templateName}.js`)

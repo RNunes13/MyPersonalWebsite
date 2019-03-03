@@ -1,0 +1,30 @@
+/**
+ * iconfont-personal Webfont
+ */
+@font-face {
+    font-family: 'iconfont-personal';
+    src: url('/assets/common/iconfont/iconfont-personal.eot.css');
+    src: url('/assets/common/iconfont/iconfont-personal.eot.css') format('embedded-opentype'),
+        url('/assets/common/iconfont/iconfont-personal.ttf.css') format('truetype'),
+        url('/assets/common/iconfont/iconfont-personal.woff2.css') format('woff2'),
+        url('/assets/common/iconfont/iconfont-personal.woff.css') format('woff'),
+        url('/assets/common/iconfont/iconfont-personal.svg.css') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin iconfont-styles {
+    font-family: "iconfont-personal";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+%iconfont {
+    @include iconfont-styles;
+}
