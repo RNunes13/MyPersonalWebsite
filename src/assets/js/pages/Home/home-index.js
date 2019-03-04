@@ -1,4 +1,5 @@
-import HomeMain from './home-main';
+
+import HomeMain from './home-intro';
 
 export default {
   init() {

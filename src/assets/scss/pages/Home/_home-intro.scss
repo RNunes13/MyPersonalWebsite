@@ -1,0 +1,96 @@
+
+.rn-home__intro {
+  @include rem(min-height, 600px);
+  height: 100vh;
+  width: 100vw;
+  background: url('/assets/images/home-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mq('sm') {
+    background-attachment: fixed;
+  }
+  
+  &--wrapper {
+    @include flex-centered;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: $color-white;
+    background-color: rgba($color-black, 0.75);
+  }
+
+  &--image {
+    @include rem(margin-bottom, 30px);
+    @include rem(width, 170px);
+    @include rem(height, 170px);
+    border: 3px solid $color-white;
+    border-radius: 50%;
+    transition-property: width, height;
+    transition-duration: 200ms;
+    transition-timing-function: $accelerate-ease;
+
+    @include mq('sm', max) {
+      @include rem(width, 130px);
+      @include rem(height, 130px);
+    }
+  }
+
+  &--greeting,
+  &--name {
+    font-family: $font-support;
+    text-align: center;
+  }
+
+  &--greeting {
+    @include rem(margin-bottom, 10px);
+    @include rem(font-size, 25px);
+    transition: font-size 200ms $accelerate-ease;
+
+    @include mq('sm', max) {
+      @include rem(font-size, 20px);
+    }
+  }
+
+  &--name {
+    @include rem(margin-bottom, 30px);
+    @include rem(font-size, 70px);
+    transition: font-size 200ms $accelerate-ease;
+
+    @include mq('sm', max) {
+      @include rem(font-size, 40px);
+    }
+
+    span {
+      @include rem(margin-right, 15px);
+    }
+  }
+
+  &--icons {
+    @include rem(margin-bottom, 30px);
+
+    .icon {
+      @include rem(margin, 0 10px);
+
+      &::before {
+        @extend %iconfont;
+      }
+
+      &-linkedin::before {
+        content: '\EA01';
+      }
+
+      &-github::before {
+        content: '\EA02';
+      }
+
+      &-email::before {
+        content: '\EA03';
+      }
+    }
+  }
+
+  &--button {
+    @extend %btn--white-fill;
+  }
+}

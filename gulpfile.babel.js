@@ -46,7 +46,7 @@ Taskerify((mix) => {
   });
 
   // Image Minifier
-  mix.imagemin(`${SRC}/common/images`, `${DIST}/common/images`);
+  mix.imagemin(`${SRC}/images`, `${DIST}/images`);
 
   // Common Files
   commomFiles.map((file) => {
