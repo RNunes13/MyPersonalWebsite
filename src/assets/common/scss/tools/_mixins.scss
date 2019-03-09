@@ -446,55 +446,60 @@
 @mixin tooltip($content: attr(data-tooltip), $direction: top, $z-index: 99) {
   position: relative;
 
-  &:before,
-  &:after {
-      display: none;
-      z-index: $z-index;
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $z-index;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 200ms;
+    transition-timing-function: $accelerate-ease;
+  }
+
+  &::before {
+    opacity: 0;
+    visibility: hidden;
+
+    @if ( $direction == 'top' ) {
+      @include triangle(down, 6px, #222);
+      @include rem(top, -10px);
+    }
+
+    @else {
+      @include triangle(up, 6px, #222);
+      @include rem(bottom, -10px);
+    }
+  }
+
+  &::after {
+    content: $content;
+    @include flex-centered();
+    @include rem(padding, 5px 10px);
+    @include rem(height, 40px);
+    @include rem(font-size, 14px);
+    @include rem(border-radius, 5px);
+    @include font-weight(semi-bold);
+    white-space: nowrap;
+    color: $color-white;
+    background-color: $color-charcoal;
+    opacity: 0;
+    visibility: hidden;
+
+    @if ( $direction == 'top' ) {
+      @include rem(top, -50px);
+    }
+
+    @else {
+      @include rem(bottom, -50px);
+    }
   }
 
   &:hover {
-    &:after { // for text bubble
-      content: $content;
-      display: block;
-      position: absolute;
-      height: 12px; // (makes total height including padding 22px)
-      padding: 6px;
-      font-size: 12px;
-      white-space: nowrap;
-      color: #fff;
-      text-shadow: 1px 1px #000;
-      background-color: #222;
-    }
-
-    @if ( $direction == 'top' ) {
-      &:before {
-        @include triangle(down, 6px, #222);
-        top: -6px;
-        margin-top: 0;
-        left: 47%;
-      }
-
-      &:after {
-        top: -28px;
-        left: 47%;
-        margin-left: -20px;
-      }
-    }
-
-    @else if ( $direction == 'bottom' ) {
-      &:before {
-        @include triangle(up, 6px, #222);
-        top: auto;
-        margin-top: 0;
-        bottom: -6px;
-        left: 47%;
-      }
-
-      &:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px;
-      }
+    &::after,
+    &::before {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

@@ -1,0 +1,86 @@
+
+@keyframes show {
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.rn-progress-bar {
+  $pb: &;
+  @include rem(padding, 0 20px);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &:not(.animate) {
+    #{$pb}__value {
+      width: 0;
+    }
+  }
+
+  &.animate {
+    #{$pb}__percent {
+      animation: show 200ms linear 1s forwards;
+    }
+  }
+
+  &__container {
+    @include rem(margin-bottom, 25px);
+    @include rem(height, 5px);
+    @include rem(border-radius, 5px);
+    width: 100%;
+    background: $color-gainsboro;
+    overflow: hidden;
+  }
+
+  &__name,
+  &__percent {
+    @include rem(font-size, 13px);
+    @include font-weight(semi-bold);
+    flex-basis: 50%;
+    color: $color-charcoal;
+  }
+
+  &__name {
+    text-align: left;
+  }
+
+  &__percent {
+    opacity: 0;
+    transform: translateY(-20%);
+    text-align: right;
+
+    &::after {
+      content: '%';
+    }
+  }
+
+  &__value {
+    height: 100%;
+    float: left;
+    transition: width 1s $accelerate-ease;
+
+    // Colors
+    &[pb-color="primary"] { background: $color-primary }
+
+    // Width
+    &[pb-percent="5"] { width: 5%; }
+    &[pb-percent="10"] { width: 10%; }
+    &[pb-percent="15"] { width: 15%; }
+    &[pb-percent="20"] { width: 20%; }
+    &[pb-percent="25"] { width: 25%; }
+    &[pb-percent="30"] { width: 30%; }
+    &[pb-percent="35"] { width: 35%; }
+    &[pb-percent="40"] { width: 40%; }
+    &[pb-percent="45"] { width: 45%; }
+    &[pb-percent="50"] { width: 50%; }
+    &[pb-percent="55"] { width: 55%; }
+    &[pb-percent="60"] { width: 60%; }
+    &[pb-percent="65"] { width: 65%; }
+    &[pb-percent="70"] { width: 70%; }
+    &[pb-percent="75"] { width: 75%; }
+    &[pb-percent="80"] { width: 80%; }
+    &[pb-percent="85"] { width: 85%; }
+    &[pb-percent="90"] { width: 90%; }
+    &[pb-percent="95"] { width: 95%; }
+    &[pb-percent="100"] { width: 100%; }
+  }
+}
