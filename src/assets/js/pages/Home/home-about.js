@@ -19,9 +19,7 @@ const Methods = {
     const progressBars = El.self.querySelectorAll('.rn-progress-bar');
 
     if (skills < windowHeight) {
-      for (const item of progressBars) {
-        item.classList.add('animate');
-      }
+      progressBars.forEach((item) => item.classList.add('animate'));
 
       window.removeEventListener('scroll', Methods.onScroll);
     }
