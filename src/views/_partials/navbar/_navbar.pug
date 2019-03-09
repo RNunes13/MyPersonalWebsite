@@ -1,1 +1,7 @@
+- var items = [{name: 'Home', href: '#home'},{name: 'About', href: '#about'},{name: 'Projects', href: '#projects'},{name: 'Contact', href: '#contact'}]
+
 nav(class="rn-navbar js--navbar")
+  ul(class="rn-navbar__items js--navbar-items")
+    each item in items
+      li(class="rn-navbar__item js--navbar-item")
+        a(class="rn-navbar__link js--navbar-link", href=item.href) #{item.name}

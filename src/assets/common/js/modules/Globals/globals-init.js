@@ -28,6 +28,7 @@ export default {
     Personal.html = document.querySelector('html');
     Personal.body = document.querySelector('body');
     Personal.header = document.querySelector('.js--header');
+    Personal.menuBtn = document.querySelector('.js--header-menu');
     Personal.navbar = document.querySelector('.js--navbar');
     Personal.footer = document.querySelector('.js--footer');
     Personal.overlay = document.querySelector('.js--overlay');
@@ -58,7 +59,8 @@ export default {
     Personal.closeMenus = (removeOverlay = false) => {
       if (removeOverlay) {
         Personal.overlay.classList.remove('is--active');
-        Personal.navbar.classList.remove('is--active');
+        Personal.navbar.classList.remove('is--open');
+        Personal.menuBtn.classList.remove('is--open');
         Personal.body.classList.remove('has--no-scroll');
       }
     };

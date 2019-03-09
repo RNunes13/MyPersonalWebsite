@@ -1,1 +1,9 @@
 header(class="rn-header js--header")
+  div(class="rn-header__container")
+    div(class="rn-header__logo")
+      a(href="/")
+        img(class="rn-header__logo--white", src="assets/images/logo-w.png", alt="Rodrigo Nunes")
+        img(class="rn-header__logo--black", src="assets/images/logo-b.png", alt="Rodrigo Nunes")
+    div(class="rn-header__navbar")
+      include ../navbar/_navbar.pug
+    button(class="rn-header__menu js--header-menu")
