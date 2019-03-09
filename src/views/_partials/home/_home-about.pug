@@ -1,0 +1,28 @@
+
+section(id="about", class="rn-home__about js--home-about")
+  div(class="rn-home__about--container")
+    h2(class="rn-home__about--title")
+      span(class="rn-home__about--title-bold") About
+      | Me
+
+    h3(class="rn-home__about--greeting")
+      | Hi There!
+      span(class="rn-home__about--greeting-bold") I'm Rodrigo Nunes
+
+    div(class="rn-home__about--summary")
+      p I am a front end developer, who likes to work with creative and challenging projects that change people's lives, providing the best experiences. As a programmer I always try to work with the best practices for an optimized and functional code, I like to try out new technologies and tools that can improve development.
+
+      p In free time I dedicate reading, hobbies and research on emerging technologies, design strategies and concepts, and everything else that can be applied to web development.
+    
+    div(class="rn-home__about--skills js--about-skills")
+      div(class="rn-progress-bar", rv-each-skill="app.skills")
+        h4(class="rn-progress-bar__name", rv-text="skill.name")
+        span(class="rn-progress-bar__percent", rv-text="skill.percent")
+        div(class="rn-progress-bar__container")
+          div(class="rn-progress-bar__value", rv-pb-percent="skill.percent", pb-color="primary")
+    
+    div(class="rn-home__about--others")
+      h4(class="rn-home__about--others-title") Others Skills
+      div(class="rn-home__about--others-icons")
+        div(class='skill', rv-each-other="app.otherSkills", rv-data-tooltip="other.name")
+          img(class='skill-image', rv-add-image-skill="other.image", rv-alt="other.name")
