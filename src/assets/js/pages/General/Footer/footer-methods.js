@@ -3,10 +3,10 @@ import { footer as El } from './__cache-selectors';
 
 export default {
   init() {
-    this.setYearCoptyright();
+    this.setYearCopyright();
   },
 
-  setYearCoptyright() {
+  setYearCopyright() {
     const year = new Date().getFullYear();
 
     El.year.textContent = `${year}.`;
