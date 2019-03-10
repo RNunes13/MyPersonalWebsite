@@ -3,10 +3,17 @@ $header: '.rn-header';
 
 #{$header}.is--fill {
   .rn-navbar {
-    background-color: $color-white;
     top: calc(#{$mobile-header-height} - 10px);
-    box-shadow: 0 5px 10px -8px $color-black;
-
+    
+    @include mq('sm', max) {
+      background-color: $color-white;
+      box-shadow: 0 5px 10px -8px $color-black;
+    }
+    
+    &__item::after {
+      background-color: $color-black;
+    }
+    
     &__link {
       color: $color-black;
     }
@@ -14,8 +21,11 @@ $header: '.rn-header';
 }
 
 .rn-navbar {
+  transition-property: background-color, height;
+  transition-duration: 200ms;
+  transition-timing-function: $accelerate-ease;
+
   @include mq('sm', max) {
-    @include rem(max-width, 540px);
     position: fixed;
     top: $mobile-header-height;
     left: 50%;
@@ -23,13 +33,7 @@ $header: '.rn-header';
     height: 0;
     overflow: hidden;
     transform: translateX(-50%);
-    transition: all 200ms $accelerate-ease;
     z-index: z('navbar');
-  }
-
-  @include mq('xs', max) {
-    @include rem(padding-left, 15px);
-    @include rem(padding-right, 15px);
   }
 
   &.is--open {
@@ -43,9 +47,11 @@ $header: '.rn-header';
     color: $color-white;
 
     @include mq('sm', max) {
-      @include rem(padding-top, 10px);
+      @include rem(padding, 10px 15px 0);
+      @include rem(max-width, 540px);
       flex-direction: column;
       align-items: flex-start;
+      margin: 0 auto;
     }
   }
 

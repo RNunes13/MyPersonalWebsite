@@ -5,6 +5,7 @@ export default {
     this.onClickMenu();
     this.fillHeader();
     this.onScroll();
+    this.onWindowResize();
   },
 
   onClickMenu() {
@@ -27,5 +28,13 @@ export default {
 
   onScroll() {
     window.addEventListener('scroll', this.fillHeader);
+  },
+
+  onWindowResize() {
+    window.addEventListener('resize', (evt) => {
+      const windowWidth = window.innerWidth;
+
+      if (windowWidth >= 768) Personal.closeMenus(true);
+    });
   },
 };
