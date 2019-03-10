@@ -5,8 +5,6 @@ const El = CacheSelectors.home.intro;
 
 const Methods = {
   init() {
-    console.log(`Initializing the home \u{1F388}`);
-
     El.downloadCv.addEventListener('click', Methods.downloadCv);
   },
 

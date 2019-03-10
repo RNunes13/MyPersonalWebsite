@@ -1,7 +1,6 @@
 
 export default {
   init() {
-    console.log('Header methods');
     this.onClickMenu();
     this.fillHeader();
     this.onScroll();
