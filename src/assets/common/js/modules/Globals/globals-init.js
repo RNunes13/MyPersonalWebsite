@@ -33,6 +33,7 @@ export default {
     Personal.footer = document.querySelector('.js--footer');
     Personal.overlay = document.querySelector('.js--overlay');
     Personal.rivets = window.rivets;
+    Personal.firebase = window.firebase;
 
     // External Plugins
     Personal.isMobile = isMobile.any;
