@@ -32,6 +32,7 @@ export default {
     Personal.navbar = document.querySelector('.js--navbar');
     Personal.footer = document.querySelector('.js--footer');
     Personal.overlay = document.querySelector('.js--overlay');
+    Personal.backTop = document.querySelector('.js--back-top');
     Personal.rivets = window.rivets;
     Personal.firebase = window.firebase;
 
