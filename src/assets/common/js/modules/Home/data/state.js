@@ -1,5 +1,7 @@
 
 export const state = {
   isSubmitingForm: false,
-  contactForm: {},
+  contactForm: {
+    buttonText: 'Send Message',
+  },
 };
