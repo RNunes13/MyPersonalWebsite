@@ -24,6 +24,7 @@
     "node-sass": "^4.9.4",
     "sass-rem": "^2.0.1",
     "scss-form-reset": "0.0.3",
+    "smoothscroll": "^0.4.0",
     "static-eval": "^2.0.2"
   },
   "devDependencies": {
