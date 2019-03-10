@@ -1,0 +1,128 @@
+
+.rn-home__contact {
+  &--container {
+    @extend %container;
+    @include rem(padding-top, 60px);
+    @include rem(padding-bottom, 60px);
+  }
+
+  &--title {
+    @extend %title;
+
+    &-bold {
+      @include rem(margin-right, 8px);
+      @include font-weight(semi-bold);
+    }
+  }
+
+  &--info {
+    $info: &;
+    @include flex-centered;
+    @include rem(margin, 0 10px);
+    justify-content: flex-start;
+
+    @include mq('md', max) {
+      @include rem(margin-bottom, 20px);
+      @include rem(max-width, 300px);
+      width: 100%;
+    }
+
+    &:hover {
+      #{$info}-icon {
+        background-color: $color-white;
+
+        &::before {
+          color: $color-primary;
+        }
+      }
+    }
+
+    &-wrapper {
+      @include flex-spaced;
+      @include rem(margin, 80px 0);
+
+      @include mq('md', max) {
+        @include rem(margin, 50px 0);
+        flex-direction: column;
+      }
+    }
+
+    &-left {
+      @include rem(margin-right, 10px);
+    }
+
+    &-icon {
+      @include flex-centered;
+      @include rem(width, 50px);
+      @include rem(height, 50px);
+      border-radius: 50%;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      transition-property: width, height, background-color;
+      transition-duration: 200ms;
+      transition-timing-function: $accelerate-ease;
+
+      @include mq('sm', max) {
+        @include rem(width, 40px);
+        @include rem(height, 40px);
+      }
+
+      &::before {
+        @extend %iconfont;
+        color: $color-white;
+        transition: color 200ms $accelerate-ease;
+      }
+
+      &.phone::before {
+        content: '\EA07';
+      }
+
+      &.pin::before {
+        content: '\EA08';
+      }
+
+      &.email::before {
+        content: '\EA03';
+      }
+    }
+
+    &-title,
+    &-text {
+      @include rem(font-size, 13px);
+      @include rem(letter-spacing, 1px);
+      @include font-weight(bold);
+      color: $color-night-rider;
+    }
+
+    &-title {
+      text-transform: uppercase;
+    }
+  }
+
+  &--form {
+    @include rem(margin-top, 40px);
+
+    .rn-form {
+      &__group {
+        &.name,
+        &.email {
+          @include mq('sm') {
+            width: 49%;
+          }
+        }
+
+        &.name {
+          @include mq('sm') {
+            float: left;
+          }
+        }
+
+        &.email {
+          @include mq('sm') {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

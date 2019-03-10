@@ -43,6 +43,10 @@
   @include clearfix;
 }
 
+.clear {
+  clear: both;
+}
+
 /**
  * Hide visually and from screenreaders, but maintain layout
  */
