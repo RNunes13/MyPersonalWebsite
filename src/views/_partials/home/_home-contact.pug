@@ -1,0 +1,71 @@
+section(id="contact", class="rn-home__contact js--home-contact")
+  div(class="rn-home__contact--container")
+    h2(class="rn-home__contact--title") 
+      span(class="rn-home__contact--title-bold") Contact
+      | Me
+
+    div(class="rn-home__contact--info-wrapper")
+      a(class="rn-home__contact--info", href="tel:+55-11-98947-7783")
+        div(class="rn-home__contact--info-left")
+          span(class="rn-home__contact--info-icon phone")
+        div(class="rn-home__contact--info-right")
+          h4(class="rn-home__contact--info-title") Phone
+          span(class="rn-home__contact--info-text") +55 11 98947-7783
+
+      a(class="rn-home__contact--info", target="_blank", href="https://www.google.com/maps/place/São+Paulo,+SP")
+        div(class="rn-home__contact--info-left")
+          span(class="rn-home__contact--info-icon pin")
+        div(class="rn-home__contact--info-right")
+          h4(class="rn-home__contact--info-title") Location
+          span(class="rn-home__contact--info-text") São Paulo - SP, Brazil.
+
+      a(class="rn-home__contact--info", href="mailto:nunesrodrigo13@outlook.com")
+        div(class="rn-home__contact--info-left")
+          span(class="rn-home__contact--info-icon email")
+        div(class="rn-home__contact--info-right")
+          h4(class="rn-home__contact--info-title") Email
+          span(class="rn-home__contact--info-text") nunesrodrigo13@outlook.com
+    
+    form(class="rn-home__contact--form rn-form js--contact-form",
+         rv-on-submit="app.controller.contact.submit")
+      fieldset(rv-disabled="app.state.isSubmitingForm")
+        div(class="rn-form__group name")
+          label(class="rn-form__label required", for="name") Name
+          input(id="name",
+                class="rn-form__input",
+                type="text",
+                name="name",
+                placeholder="Your Name",
+                required)
+        
+        div(class="rn-form__group email")
+          label(class="rn-form__label required", for="email") Email
+          input(id="email",
+                class="rn-form__input",
+                type="email",
+                name="email",
+                placeholder="Your Email",
+                required)
+        
+        div(class="rn-form__group subject clear")
+          label(class="rn-form__label required", for="subject") Subject
+          input(id="subject",
+                class="rn-form__input",
+                type="text",
+                name="subject",
+                placeholder="Your Subject",
+                required)
+        
+        div(class="rn-form__group message")
+          label(class="rn-form__label required", for="message") Message
+          textarea(id="message",
+                  class="rn-form__textarea",
+                  name="message",
+                  rows="5",
+                  placeholder="Your Message",
+                  required)
+
+        div(class="rn-form__group")
+          button(class="rn-form__button",
+                type="submit",
+                rv-text="app.state.contactForm.buttonText")

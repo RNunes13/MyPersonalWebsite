@@ -23,6 +23,7 @@
   }
 
   // All buttons
+  &--primary,
   &--white-fill {
     @extend %btn;
 
@@ -46,6 +47,17 @@
   /**
    * Specif buttons styles
    */
+  &--primary {
+    border-color: $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
   &--white-fill {
     border-color: $color-white;
     background-color: transparent;

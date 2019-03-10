@@ -73,3 +73,8 @@ ol {
 img {
   @include reset-media;
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+}
