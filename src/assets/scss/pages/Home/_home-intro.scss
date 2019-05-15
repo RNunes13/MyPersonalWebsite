@@ -12,6 +12,7 @@
   }
   
   &--wrapper {
+    @include rem(padding, 0 20px);
     @include flex-centered;
     flex-direction: column;
     height: 100%;
