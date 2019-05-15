@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="I'm a front end developer, who likes to work with creative and challenging projects that change people's lives, providing the best experiences."/>
+    <meta name="author" content="Rodrigo Nunes"/>
+    <meta name="copyright" content="RNunes"/>
+    <meta name="keywords" content="front-end developer, web designer, sao paulo"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <meta property="og:url" content="https://rodrigonunes.tech/"/>
+    <meta property="og:title" content="Rodrigo Nunes | Front End Developer"/>
+    <meta property="og:site_name" content="Rodrigo Nunes | Front End Developer"/>
+    <meta property="og:description" content="I'm a front end developer, who likes to work with creative and challenging projects that change people's lives, providing the best experiences."/>
+    <meta property="og:image" content="https://rodrigonunes.tech/assets/images/logo-b.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <title>Rodrigo Nunes | Front-End Developer</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="//cdnjs.cloudflare.com" crossorigin="crossorigin">
+    <link rel="preconnect" href="//ajax.googleapis.com" crossorigin="crossorigin">
+    <link rel="preconnect" href="//fonts.google.com/" crossorigin="crossorigin">
+    <link rel="preconnect" href="//www.gstatic.com/" crossorigin="crossorigin"><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135925608-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-135925608-1');
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://rodrigonunes.tech/",
+        "logo": "https://rodrigonunes.tech/assets/images/logo-b.png",
+        "sameAs": [
+          "https://github.com/RNunes13",
+          "http://linkedin.com/in/rodrigonunes13/",
+        ]
+      }
+    </script>
+    <link href="assets/common/css/personal-common-globals.css" rel="stylesheet" media="all">
+    <link href="assets/css/personal-general.css" rel="stylesheet" media="all">
+    <link href="assets/css/personal-home.css" media="all" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="rn-overlay js--overlay"></div>
+    <header class="rn-header js--header">
+      <div class="rn-header__container">
+        <div class="rn-header__logo"><a href="/"><img class="rn-header__logo--white" src="assets/images/logo-w.png" alt="Rodrigo Nunes"><img class="rn-header__logo--black" src="assets/images/logo-b.png" alt="Rodrigo Nunes"></a></div>
+        <div class="rn-header__navbar">
+          <nav class="rn-navbar js--navbar">
+            <ul class="rn-navbar__items js--navbar-items">
+              <li class="rn-navbar__item is--active js--navbar-item"><a class="rn-navbar__link js--navbar-link" href="#home">Home</a></li>
+              <li class="rn-navbar__item undefined js--navbar-item"><a class="rn-navbar__link js--navbar-link" href="#about">About</a></li>
+              <li class="rn-navbar__item undefined js--navbar-item"><a class="rn-navbar__link js--navbar-link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button class="rn-header__menu js--header-menu"></button>
+      </div>
+    </header>
+    <main class="rn-home__main js--home" role="main"><a class="rn-back-top js--back-top" href="#"></a>
+      <section class="rn-home__intro" id="home">
+        <div class="rn-home__intro--wrapper"><img class="rn-home__intro--image" src="assets/images/profile.jpg" alt="Rodrigo Nunes">
+          <h2 class="rn-home__intro--greeting">Hello & Welcome</h2>
+          <h1 class="rn-home__intro--name"> <span>I'm</span><strong>Rodrigo Nunes.</strong></h1>
+          <div class="rn-home__intro--icons"><a class="icon icon-linkedin" href="//linkedin.com/in/rodrigonunes13/" title="LinkedIn"></a><a class="icon icon-github" href="//github.com/RNunes13" title="GitHub"></a><a class="icon icon-email" href="mailto:nunesrodrigo13@outlook.com" title="Email"></a></div>
+          <button class="rn-home__intro--button js--download-cv">Download CV</button>
+        </div>
+      </section>
+      <section class="rn-home__about js--home-about" id="about">
+        <div class="rn-home__about--container">
+          <h2 class="rn-home__about--title"><span class="rn-home__about--title-bold">About</span>Me</h2>
+          <h3 class="rn-home__about--greeting">Hi There!<span class="rn-home__about--greeting-bold">I'm Rodrigo Nunes</span></h3>
+          <div class="rn-home__about--summary">
+            <p>I am a front end developer, who likes to work with creative and challenging projects that change people's lives, providing the best experiences. As a programmer I always try to work with the best practices for an optimized and functional code, I like to try out new technologies and tools that can improve development.</p>
+            <p>In free time I dedicate reading, hobbies and research on emerging technologies, design strategies and concepts, and everything else that can be applied to web development.</p>
+          </div>
+          <div class="rn-home__about--skills js--about-skills">
+            <div class="rn-progress-bar" rv-each-skill="app.skills">
+              <h4 class="rn-progress-bar__name" rv-text="skill.name"></h4><span class="rn-progress-bar__percent" rv-text="skill.percent"></span>
+              <div class="rn-progress-bar__container">
+                <div class="rn-progress-bar__value" rv-pb-percent="skill.percent" pb-color="primary"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rn-home__about--others">
+            <h4 class="rn-home__about--others-title">Others Skills</h4>
+            <div class="rn-home__about--others-icons">
+              <div class="skill" rv-each-other="app.otherSkills" rv-data-tooltip="other.name"><img class="skill-image" rv-add-image-skill="other.image" rv-alt="other.name"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rn-home__contact js--home-contact" id="contact">
+        <div class="rn-home__contact--container">
+          <h2 class="rn-home__contact--title"> <span class="rn-home__contact--title-bold">Contact</span>Me</h2>
+          <div class="rn-home__contact--info-wrapper"><a class="rn-home__contact--info" href="tel:+55-11-98947-7783">
+              <div class="rn-home__contact--info-left"><span class="rn-home__contact--info-icon phone"></span></div>
+              <div class="rn-home__contact--info-right">
+                <h4 class="rn-home__contact--info-title">Phone</h4><span class="rn-home__contact--info-text">+55 11 98947-7783</span>
+              </div></a><a class="rn-home__contact--info" target="_blank" href="https://www.google.com/maps/place/São+Paulo,+SP">
+              <div class="rn-home__contact--info-left"><span class="rn-home__contact--info-icon pin"></span></div>
+              <div class="rn-home__contact--info-right">
+                <h4 class="rn-home__contact--info-title">Location</h4><span class="rn-home__contact--info-text">São Paulo - SP, Brazil.</span>
+              </div></a><a class="rn-home__contact--info" href="mailto:nunesrodrigo13@outlook.com">
+              <div class="rn-home__contact--info-left"><span class="rn-home__contact--info-icon email"></span></div>
+              <div class="rn-home__contact--info-right">
+                <h4 class="rn-home__contact--info-title">Email</h4><span class="rn-home__contact--info-text">nunesrodrigo13@outlook.com</span>
+              </div></a></div>
+          <form class="rn-home__contact--form rn-form js--contact-form" rv-on-submit="app.controller.contact.submit">
+            <fieldset rv-disabled="app.state.isSubmitingForm">
+              <div class="rn-form__group name">
+                <label class="rn-form__label required" for="name">Name</label>
+                <input class="rn-form__input" id="name" type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="rn-form__group email">
+                <label class="rn-form__label required" for="email">Email</label>
+                <input class="rn-form__input" id="email" type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="rn-form__group subject clear">
+                <label class="rn-form__label required" for="subject">Subject</label>
+                <input class="rn-form__input" id="subject" type="text" name="subject" placeholder="Your Subject" required>
+              </div>
+              <div class="rn-form__group message">
+                <label class="rn-form__label required" for="message">Message</label>
+                <textarea class="rn-form__textarea" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="rn-form__group">
+                <button class="rn-form__button" type="submit" rv-text="app.state.contactForm.buttonText"></button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="rn-footer">
+      <div class="rn-footer__container">
+        <div class="rn-footer__logo"><a href="/"><img class="rn-footer__logo--image" src="assets/images/logo-b.png" alt="Rodrigo Nunes"></a></div>
+        <div class="rn-footer__social"><a class="icon icon-linkedin" href="//linkedin.com/in/rodrigonunes13/" title="LinkedIn"></a><a class="icon icon-github" href="//github.com/RNunes13" title="GitHub"></a><a class="icon icon-email" href="mailto:nunesrodrigo13@outlook.com" title="Email"></a></div>
+        <div class="rn-footer__copyright"><span>RNunes &copy;</span><span class="rn-footer__copyright--year js--footer-year"></span><span>All Right Reserved.</span></div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.13/fontfaceobserver.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ismobilejs/0.4.1/isMobile.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"></script>
+    <script type="text/javascript" src="//www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script type="text/javascript" src="//www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+    <script type="text/javascript" src="assets/common/js/personal-common-globals.js"></script>
+    <script type="text/javascript" src="assets/js/personal-general.js"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ['Lato:300,400,700', 'Montserrat:400,600,700,900'],
+        },
+      });
+    </script>
+    <script src="assets/js/personal-home.js"></script>
+  </body>
+</html>
