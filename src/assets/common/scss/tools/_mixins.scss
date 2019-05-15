@@ -353,7 +353,12 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $primary;
+    @include rem(border-radius, 10px);
+    background: rgba($primary, 0.3);
+
+    &:hover {
+      background: $primary;
+    }
   }
 
   &::-webkit-scrollbar-track {
