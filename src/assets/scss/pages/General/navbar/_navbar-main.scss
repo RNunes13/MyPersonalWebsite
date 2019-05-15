@@ -63,18 +63,20 @@ $header: '.rn-header';
     &::after {
       content: "";
       position: absolute;
-      left: 50%;
+      left: 10%;
       bottom: 0;
       width: 0;
       height: 2px;
       background-color: $color-gainsboro;
-      transform: translateX(-50%);
       transition: width 200ms $accelerate-ease;
     }
 
-    &:hover::after {
-      @include mq('sm') {
-        width: 80%;
+    &.is--active,
+    &:hover {
+      &::after {
+        @include mq('sm') {
+          width: 80%;
+        }
       }
     }
   }
