@@ -510,3 +510,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin hover-supported {    
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
