@@ -44,6 +44,16 @@ textarea,
 }
 
 /**
+ * Remove touch highlight indicator
+ */
+ a,
+ div,
+ span,
+ button {
+   -webkit-tap-highlight-color: transparent;
+ }
+
+/**
  * Hand cursor on clickable input elements
  */
 
