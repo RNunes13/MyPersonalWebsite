@@ -38,6 +38,9 @@ export default {
 
     // External Plugins
     Personal.isMobile = isMobile.any;
+
+    // Global variables
+    Personal.navbarHeight = 55; // pixels
   },
 
   setLazy() {

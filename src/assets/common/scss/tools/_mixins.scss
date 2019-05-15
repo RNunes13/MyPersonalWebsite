@@ -353,7 +353,12 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $primary;
+    @include rem(border-radius, 10px);
+    background: rgba($primary, 0.3);
+
+    &:hover {
+      background: $primary;
+    }
   }
 
   &::-webkit-scrollbar-track {
@@ -509,4 +514,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin hover-supported {    
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
 }
