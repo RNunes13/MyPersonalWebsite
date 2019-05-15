@@ -16,7 +16,7 @@
   transition-timing-function: $accelerate-ease;
   z-index: z('back-top');
 
-  &:hover {
+  @include hover-supported() {
     background-color: transparent;
 
     &::before {

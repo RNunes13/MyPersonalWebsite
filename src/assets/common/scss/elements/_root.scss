@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  @include scrollbar(7px, $color-black, $color-gainsboro);
   background-color: $color-body-bg;
   overflow-x: hidden;
   overflow-y: auto;
@@ -42,6 +43,16 @@ textarea,
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+
+/**
+ * Remove touch highlight indicator
+ */
+ a,
+ div,
+ span,
+ button {
+   -webkit-tap-highlight-color: transparent;
+ }
 
 /**
  * Hand cursor on clickable input elements

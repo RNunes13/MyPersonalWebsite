@@ -52,7 +52,7 @@
     background-color: $color-primary;
     color: $color-white;
 
-    &:hover {
+    @include hover-supported() {
       background-color: $color-white;
       color: $color-black;
     }
@@ -63,7 +63,7 @@
     background-color: transparent;
     color: $color-white;
 
-    &:hover {
+    @include hover-supported() {
       background-color: $color-white;
       color: $color-black;
     }
