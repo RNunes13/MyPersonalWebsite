@@ -13,7 +13,7 @@ export default {
     const target = document.querySelector(this.hash);
 
     if (target) {
-      smoothScroll(target, 1500);
+      smoothScroll(target.offsetTop - Personal.navbarHeight, 1000);
       Personal.closeMenus(true);
     }
   },
