@@ -20,6 +20,8 @@ const otherFiles  = ['home', 'general'];
 
 // eslint-disable-next-line new-cap
 Taskerify((mix) => {
+  mix.browserSync();
+
   // PugJS Template / Params -> srcFolder, distFolder, options
   mix.pug('src/views', 'dist/');
 
