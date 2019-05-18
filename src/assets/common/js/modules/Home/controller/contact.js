@@ -1,7 +1,5 @@
 
-/* eslint-disable indent */
 import { home as El } from '../../Globals/globals-selectors';
-import { database } from '../../../utils/firebase';
 
 export const contact = {
   submit(evt, scope) {
@@ -15,29 +13,58 @@ export const contact = {
     const message = El.$contactForm.querySelector('#message').value;
 
     const data = {
+      addressee: 'nunesrodrigo13@outlook.com',
       name,
       email,
       subject,
       message,
     };
 
-    database.add('contacts', data)
-    .then((docRef) => {
+    fetch('https://us-central1-rodrigo-nunes.cloudfunctions.net/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    })
+    .then((resp) => {
+      if (resp.ok) {
         scope.app.state.contactForm.buttonText = 'Sent';
-        alert(`Thanks for message \u{1F601}. I\'ll return as soon as possible...\n\nIf you need, this is ID for your contact: ${docRef.id}.`);
 
+        Personal.toastify.success({
+          title: 'Contato enviado',
+          message: `Muito obrigado \u{1F601}, retornarei o mais breve possível.`,
+          timeout: 10000,
+        });
+  
         setTimeout(() => {
           scope.app.state.isSubmitingForm = false;
           scope.app.state.contactForm.buttonText = 'Send Message';
           evt.target.reset();
         }, 2000);
-      })
-      .catch((err) => {
-        alert(`Something went wrong \u{1F622}, try again soon.`);
-
-        console.warn(err);
+      } else {
+        Personal.toastify.error({
+          title: 'Erro',
+          message: `Ocorreu um erro no envio do contato \u{1F622}, tente novamente em instantes.`,
+          timeout: 10000,
+        });
+        
+        console.warn(resp.statusText);
         scope.app.state.isSubmitingForm = false;
         scope.app.state.contactForm.buttonText = 'Send Message';
+      }
+    })
+    .catch((err) => {
+      Personal.toastify.error({
+        title: 'Erro',
+        message: `Ocorreu um erro no envio do contato \u{1F622}, tente novamente em instantes.`,
+        timeout: 10000,
       });
+        
+      console.warn(err);
+      scope.app.state.isSubmitingForm = false;
+      scope.app.state.contactForm.buttonText = 'Send Message';
+    });
   },
 };
