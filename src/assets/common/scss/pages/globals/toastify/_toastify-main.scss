@@ -1,0 +1,15 @@
+
+.iziToast {
+  &-wrapper {
+    font-family: $font-main !important;
+  }
+
+  &-title {
+    @include rem(margin-bottom, 3px !important);
+  }
+
+  &-message,
+  &-close {
+    @include font-weight(bold);
+  }
+}

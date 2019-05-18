@@ -19,6 +19,7 @@
   "dependencies": {
     "browser-resolve": "^1.11.3",
     "initialize-css": "^1.4.0",
+    "izitoast": "^1.4.0",
     "lodash": "4.17.11",
     "minimatch": "3.0.2",
     "node-sass": "^4.9.4",
